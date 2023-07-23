@@ -1,12 +1,12 @@
 #!/bin/sh
 # shellcheck disable=SC2086
 
-: "${start=2005}"
+: "${start=2000}"
 : "${end=$(date +%Y)}"
 
 mv rclone.log rclone.log.old
 
-flags="--progress --log-file=rclone.log"
+flags="--progress --log-file=rclone.log --log-level=DEBUG"
 if [ -z "$NO_DRY_RUN" ]; then
         flags="$flags --dry-run"
 fi
