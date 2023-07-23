@@ -8,11 +8,11 @@ jobs:
   copy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: AnimMouse/setup-rclone@v1
       with:
         rclone_config: ${{ secrets.RCLONE_CONFIG }}
-    - run: ./config/copy.sh
+    - run: NO_DRY_RUN=1 ./config/copy.sh
     - run: cat rclone.log
     - uses: actions/upload-artifact@v3
       with:
