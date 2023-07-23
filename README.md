@@ -1,9 +1,10 @@
 ## gphotos-to-onedrive
 
 I use Google Photos' 15GB of free storage as a "staging" area for my photos.
+
 I use OneDrive as the long term backup solution.
-Every so often I go through the following steps to copy over my Google Photos to OneDrive.
-It's not fully automated.
+
+Every so often I go through the following steps to "commit" my Google Photos to OneDrive.
 
 ## instructions
 
@@ -39,10 +40,18 @@ ip = ...
 ❯ ssh root@...
 ```
 
-On the VM, test it out:
+On the VM exists a convenient `copy.sh` script.
+Test it out:
 
 ```console
-root@rcloner:~# DRY_RUN=1 ./copy.sh
+root@rcloner:~# start=2020 end=2021 ./copy.sh # dry run by default
+root@rcloner:~# tail -f rclone.long
+```
+
+When you're ready:
+
+```console
+root@rcloner:~# NO_DRY_RUN=1 ./copy.sh
 ```
 
 ### NOTE
