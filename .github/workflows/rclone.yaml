@@ -1,0 +1,20 @@
+---
+name: rclone
+
+on:
+  workflow_dispatch:
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: AnimMouse/setup-rclone@v1
+      with:
+        rclone_config: ${{ secrets.RCLONE_CONFIG }}
+    - run: ./config/copy.sh
+    - run: cat rclone.log
+    - uses: actions/upload-artifact@v3
+      with:
+        name: rclone.log
+        path: rclone.log
