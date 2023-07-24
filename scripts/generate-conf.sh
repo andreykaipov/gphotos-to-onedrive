@@ -15,7 +15,7 @@ main() {
                 test -z "${FORCE-}" &&
                         rclone --config "$f" lsd gphotos:/media/by-month/2000/2000-01 &&
                         rclone --config "$f" lsd onedrive:/
-        } >/dev/null; then
+        } >/dev/null 2>&1; then
                 log "Looks good"
                 exit
         fi
