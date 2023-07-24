@@ -6,7 +6,7 @@
 
 mv rclone.log rclone.log.old
 
-flags="--progress --log-file=rclone.log --log-level=DEBUG"
+flags="--progress --log-file=rclone.log --log-level=INFO"
 if [ -z "$NO_DRY_RUN" ]; then
         flags="$flags --dry-run"
 fi
