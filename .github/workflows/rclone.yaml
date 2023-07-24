@@ -14,9 +14,8 @@ jobs:
     - uses: AnimMouse/setup-rclone@v1
       with:
         rclone_config: ${{ secrets.RCLONE_CONFIG }}
-    - run: NO_DRY_RUN=1 ./config/copy.sh
+    - run: ./config/copy.sh >/dev/null
+      env:
+        NO_DRY_RUN: 1
+        LOG_LEVEL: NOTICE
     - run: cat rclone.log
-    - uses: actions/upload-artifact@v3
-      with:
-        name: rclone.log
-        path: rclone.log

@@ -3,10 +3,11 @@
 
 : "${start=2000}"
 : "${end=$(date +%Y)}"
+: "${LOG_LEVEL=INFO}"
 
 mv rclone.log rclone.log.old
 
-flags="--progress --log-file=rclone.log --log-level=INFO"
+flags="--progress --log-file=rclone.log --log-level=$LOG_LEVEL"
 if [ -z "$NO_DRY_RUN" ]; then
         flags="$flags --dry-run"
 fi
