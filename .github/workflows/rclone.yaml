@@ -3,6 +3,8 @@ name: rclone
 
 on:
   workflow_dispatch:
+  schedule:
+  - cron: '0 0 1-31/2 * *' # every odd day
 
 jobs:
   copy:
