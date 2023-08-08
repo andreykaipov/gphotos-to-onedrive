@@ -17,7 +17,14 @@ This repo houses a workflow that "commits" my Google Photos to OneDrive.
   I haven't ran this long enough to see what happens.
   🤷
 
-- Maybe you might even have to automate logging into the client apps with Selenium or something lol
+  Note from two weeks later (8/7/23): seems like the Google refresh token stops working after a week.
+  https://forum.rclone.org/t/rclone-google-drive-token-expires-every-week/22502 suggests it's because the Google app was in testing.
+  Seems like you can just ignore the scary warnings from Google for verification and publish it to production regardless.
+  Let's see what happens in a few weeks!
+
+- ~~Maybe you might even have to automate logging into the client apps with Selenium or something lol~~
+
+  Probably don't need to do this is the refresh token works correctly
 
 ## setup
 
