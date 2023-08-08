@@ -105,6 +105,15 @@ Or we can work from a VM:
    root@rcloner:~# NO_DRY_RUN=1 ./copy.sh        # when we're ready
    ```
 
+## troubleshooting
+
+Start from the very beginning and check the custom clients you created following:
+
+- https://rclone.org/drive/#making-your-own-client-id
+- https://rclone.org/onedrive/#getting-your-own-client-id-and-key
+
+---
+
 ### NOTE
 
 **Please don't ever run `rclone sync ...`.**
