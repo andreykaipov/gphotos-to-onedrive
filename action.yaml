@@ -1,0 +1,32 @@
+---
+name: gphotos-to-onedrive rcloner
+
+description: Copies gphotos to onedrive using rclone
+
+inputs:
+  destination_root:
+    required: true
+    description: |
+      The destination root to copy Google photos to, e.g. /media/albums.
+  rclone_config:
+    required: true
+    description: |
+      The rclone config to use for this workflow. It should be stored as
+      a secret in your repository and referenced via `secrets.RCLONE_WHATEVER`.
+
+runs:
+  using: composite
+  steps:
+  - uses: AnimMouse/setup-rclone@v1
+    with:
+      rclone_config: ${{ inputs.rclone_config }}
+  - name: copy
+    run: ./config/copy.sh >/dev/null
+    shell: bash
+    env:
+      NO_DRY_RUN: 1
+      LOG_LEVEL: NOTICE
+      DESTINATION_ROOT: ${{ inputs.destination_root }}
+  - name: cat
+    run: cat rclone.log
+    shell: bash
