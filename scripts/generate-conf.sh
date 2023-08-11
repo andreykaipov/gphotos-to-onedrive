@@ -8,7 +8,7 @@ main() {
         log "Setting up gphotos-to-onedrive"
         : "${OP_SERVICE_ACCOUNT_TOKEN?needs to be set for op CLI}"
         op user get --me
-        f=config/rclone.conf
+        f=${1-config/rclone.conf}
 
         log "Testing $f for proper refresh token"
         if {
@@ -21,7 +21,7 @@ main() {
         fi
 
         log "Generating rclone config to $f"
-        rclone_conf >$f
+        rclone_conf >"$f"
 
         log "Reconnecting with Google Photos"
         log "If there's a mysterious _something went wrong_ error, try it from an incognito window"
@@ -51,4 +51,4 @@ EOF
 }
 
 set -eu
-main
+main "$@"
