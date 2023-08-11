@@ -24,7 +24,7 @@ This repo houses a workflow that "commits" my Google Photos to OneDrive.
 
 - ~~Maybe you might even have to automate logging into the client apps with Selenium or something lol~~
 
-  Probably don't need to do this is the refresh token works correctly
+  Probably don't need to do this if the refresh token works correctly
 
 ## setup
 
@@ -42,11 +42,13 @@ But things break, so here's documentation for you, Andrey from the future.
    ❯ export OP_SERVICE_ACCOUNT_TOKEN=...
    ```
 
-1. Generate the required `rclone.conf` with `./script/generate-conf.sh`.
+1. Generate the required rclone config with `./script/generate-conf.sh`.
+   Pass it the file name to use.
    Click the links to authenticate with our client apps and grant them the necessary permissions.
+   If generating the configs for others like `rclone.mom.conf`, take extra precaution as to which accounts you are authenticating with when granting your `rcloner` app permissions.
 
    ```console
-   ❯ ./scripts/generate-conf.sh
+   ❯ ./scripts/generate-conf.sh config/rclone.andrey.conf
    Setting up gphotos-to-onedrive
    ...
    Testing config/rclone.conf for proper refresh token
@@ -69,17 +71,23 @@ But things break, so here's documentation for you, Andrey from the future.
    ...
    ```
 
+1. Try to generate the config again.
    Trying to generate the config again will tell you it's already good.
-   We can force this by setting `FORCE=1` though.
+
+   We can force generation by setting `FORCE=1`, or just passing it a different file that has yet to exist.
 
 ## usage
 
-With the generated config present, we can upload it as a secret to this repo:
+With the generated configs present, we can upload as a secret to this repo:
 
-1. This assumes we'll be using the workflow to copy our stuff.
+1. This assumes we'll be using the included workflow to copy our stuff.
 
    ```console
-   ❯ ./scripts/upload-conf.sh
+   ❯ ./scripts/upload-conf.sh RCLONE_CONFIG_ANDREY ./config/rclone.andrey.conf
+   ✓ Set Actions secret RCLONE_CONFIG_ANDREY for andreykaipov/gphotos-to-onedrive
+
+   ❯ ./scripts/upload-conf.sh RCLONE_CONFIG_MOM ./config/rclone.mom.conf
+   ✓ Set Actions secret RCLONE_CONFIG_MOM for andreykaipov/gphotos-to-onedrive
    ```
 
 Or we can work from a VM:
