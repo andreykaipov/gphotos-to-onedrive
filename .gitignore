@@ -1,7 +1,7 @@
 .terraform
 .terraform.lock.hcl
 terraform.tfstate*
-config/rclone.conf
+rclone*.conf*
 
 # Devenv
 .devenv*
@@ -12,4 +12,3 @@ devenv.local.nix
 
 # pre-commit
 .pre-commit-config.yaml
-
