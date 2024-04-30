@@ -22,6 +22,16 @@ This repo houses a workflow that "commits" my Google Photos to OneDrive.
   Seems like you can just ignore the scary warnings from Google for verification and publish it to production regardless.
   Let's see what happens in a few weeks!
 
+  On April 18 2024, it seems like the OneDrive token expired.
+  I just had to do the setup below once again for each of our accounts.
+
+  ```
+  Failed to create file system for "onedrive:/media/albums/2000/01": failed to get root:
+  Get "https://graph.microsoft.com/v1.0/drives/72aefe4bd87f9136/root": couldn't fetch token:
+  invalid_grant: maybe token expired?
+  - try refreshing with "rclone config reconnect onedrive:"
+  ```
+
 - ~~Maybe you might even have to automate logging into the client apps with Selenium or something lol~~
 
   Probably don't need to do this if the refresh token works correctly
