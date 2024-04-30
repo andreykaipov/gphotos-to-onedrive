@@ -1,0 +1,217 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "_1password@latest": {
+      "last_modified": "2024-04-20T03:04:14-04:00",
+      "resolved": "github:NixOS/nixpkgs/fd16bb6d3bcca96039b11aa52038fafeb6e4f4be#_1password",
+      "source": "devbox-search",
+      "version": "2.27.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/br56ck7xzglq8w6rwq74m93yjny10983-1password-cli-2.27.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/br56ck7xzglq8w6rwq74m93yjny10983-1password-cli-2.27.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5hqqiw3m48j3p0kq8iig6sfg8h1ii0nl-1password-cli-2.27.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/5hqqiw3m48j3p0kq8iig6sfg8h1ii0nl-1password-cli-2.27.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/rh9xb3q9c70bfvcmxj5wpm7vqiffd0ag-1password-cli-2.27.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/rh9xb3q9c70bfvcmxj5wpm7vqiffd0ag-1password-cli-2.27.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qxli36j5ccnr6lbsvbq0kcr2q8aixpkg-1password-cli-2.27.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/qxli36j5ccnr6lbsvbq0kcr2q8aixpkg-1password-cli-2.27.0"
+        }
+      }
+    },
+    "gh@latest": {
+      "last_modified": "2024-04-19T17:36:04-04:00",
+      "resolved": "github:NixOS/nixpkgs/92d295f588631b0db2da509f381b4fb1e74173c5#gh",
+      "source": "devbox-search",
+      "version": "2.48.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/al0w11wik8xvjv311f9hdcni6lcbd22g-gh-2.48.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/al0w11wik8xvjv311f9hdcni6lcbd22g-gh-2.48.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/fa3pwqlw4izfip7kg4c1iv7gdhwjgsf7-gh-2.48.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/fa3pwqlw4izfip7kg4c1iv7gdhwjgsf7-gh-2.48.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/m9jcg3yp042alkymg4qy3k4skyfzxpgs-gh-2.48.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/m9jcg3yp042alkymg4qy3k4skyfzxpgs-gh-2.48.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/yk2hqa1jnc9r26q93cs8m6gi4872s1ga-gh-2.48.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/yk2hqa1jnc9r26q93cs8m6gi4872s1ga-gh-2.48.0"
+        }
+      }
+    },
+    "opentofu@latest": {
+      "last_modified": "2024-04-19T17:36:04-04:00",
+      "resolved": "github:NixOS/nixpkgs/92d295f588631b0db2da509f381b4fb1e74173c5#opentofu",
+      "source": "devbox-search",
+      "version": "1.6.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ylhxa5kydnyl3jg6f9wn6vad8zp5lbyl-opentofu-1.6.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ylhxa5kydnyl3jg6f9wn6vad8zp5lbyl-opentofu-1.6.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bc2civ3ilhaaghfbn4rriwk1402m674l-opentofu-1.6.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/bc2civ3ilhaaghfbn4rriwk1402m674l-opentofu-1.6.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bhsdpc0y9h4hvh6hp3993li3w29r5xnb-opentofu-1.6.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/bhsdpc0y9h4hvh6hp3993li3w29r5xnb-opentofu-1.6.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wrkgrzwj3l7yn8jxnc3rin8961v87sqf-opentofu-1.6.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/wrkgrzwj3l7yn8jxnc3rin8961v87sqf-opentofu-1.6.2"
+        }
+      }
+    },
+    "rclone@latest": {
+      "last_modified": "2024-04-19T17:36:04-04:00",
+      "resolved": "github:NixOS/nixpkgs/92d295f588631b0db2da509f381b4fb1e74173c5#rclone",
+      "source": "devbox-search",
+      "version": "1.66.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kh41h3l6cap16jc7avm7wrh8ssfw766n-rclone-1.66.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/rvk0iqxg6nhd9vribzy2i5rqkwiwh5ns-rclone-1.66.0-man",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/kh41h3l6cap16jc7avm7wrh8ssfw766n-rclone-1.66.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/fmq0r17zyhi963bj4s50zrqq3sw842hn-rclone-1.66.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/3ym2i8fax8af6xxsr9r5iry5xkjz88n9-rclone-1.66.0-man",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/fmq0r17zyhi963bj4s50zrqq3sw842hn-rclone-1.66.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hfzq76n73kjs7v10jvxqhg2v2l3hwbpr-rclone-1.66.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/68xq5c2hcqqmcg3zzlnf0df0h2fg8zq3-rclone-1.66.0-man",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hfzq76n73kjs7v10jvxqhg2v2l3hwbpr-rclone-1.66.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/sm0mlpf813n2hsamn74iynj1xjff5m1h-rclone-1.66.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/d64fj9jkvsgnfjc8vv1pnqz0bi0i2p65-rclone-1.66.0-man",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/sm0mlpf813n2hsamn74iynj1xjff5m1h-rclone-1.66.0"
+        }
+      }
+    }
+  }
+}
