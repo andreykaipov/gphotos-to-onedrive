@@ -17,4 +17,4 @@ jobs:
           printf '%s' "${{ secrets.RCLONE_CONFIG }}" | base64 -d > /tmp/rclone.conf
           rclone --config /tmp/rclone.conf config file
           rclone --config /tmp/rclone.conf listremotes
-          rclone --no-check-certificate --config /tmp/rclone.conf copy onedrive:media/albums/2024/02 gphotos:upload
+          rclone --no-check-certificate --config /tmp/rclone.conf copy onedrive:media/albums/2024/02 gphotos:upload --progress -v
