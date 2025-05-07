@@ -13,4 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
+          rclone version
+          echo 'rclone --config <<<"${secrets.RCLONE_CONFIG} copy onedrive:media/albums/2024/02 gphotos:upload'
           rclone --config <<<"${secrets.RCLONE_CONFIG} copy onedrive:media/albums/2024/02 gphotos:upload
+
