@@ -1,0 +1,16 @@
+---
+name: onedrive to gphotos
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1-31/2 * *" # every odd day
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    container: ghcr.io/andreykaipov/rclone-gphotos-fork
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          rclone --config <<<"${secrets.RCLONE_CONFIG} copy onedrive:media/albums/2024/02 gphotos:upload
