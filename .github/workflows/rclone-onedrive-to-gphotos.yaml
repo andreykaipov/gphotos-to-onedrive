@@ -18,4 +18,4 @@ jobs:
           printf '%s' "${{ secrets.RCLONE_CONFIG }}" | base64 -d > /tmp/rclone.conf
           rclone --config /tmp/rclone.conf config file
           rclone --config /tmp/rclone.conf listremotes
-          ./scripts/onedrive-to-gphotos.sh
+          NO_DRY_RUN=1 ./scripts/onedrive-to-gphotos.sh
