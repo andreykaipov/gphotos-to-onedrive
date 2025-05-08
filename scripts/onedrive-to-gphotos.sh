@@ -1,4 +1,4 @@
-: "${start=2000}"
+: "${start=2001}"
 : "${end=$(date +%Y)}"
 
 flags='--config /tmp/rclone.conf --no-check-certificate --log-level INFO'
