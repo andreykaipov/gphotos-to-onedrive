@@ -19,5 +19,3 @@ jobs:
           rclone --config /tmp/rclone.conf config file
           rclone --config /tmp/rclone.conf listremotes
           ./scripts/onedrive-to-gphotos.sh
-          # rclone --config /tmp/rclone.conf --no-check-certificate --log-level INFO copy onedrive:media/albums/2023/08 gphotos:upload
-          #

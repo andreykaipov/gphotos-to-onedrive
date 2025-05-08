@@ -1,7 +1,7 @@
 : "${start=2000}"
 : "${end=$(date +%Y)}"
 
-flags='/tmp/rclone.conf --no-check-certificate --log-level INFO'
+flags='--config /tmp/rclone.conf --no-check-certificate --log-level INFO'
 
 if [ -z "$NO_DRY_RUN" ]; then
         flags="$flags --dry-run"
