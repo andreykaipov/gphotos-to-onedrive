@@ -1,5 +1,5 @@
 : "${start=2001}"
-: "${end=$(date +%Y)}"
+: "${end=2009}"
 
 flags='--config /tmp/rclone.conf --no-check-certificate --log-level INFO'
 
