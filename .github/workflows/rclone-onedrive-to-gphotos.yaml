@@ -3,17 +3,16 @@ name: onedrive to gphotos
 
 on:
   workflow_dispatch:
+    inputs:
+      start:
+        description: start year
+        required: false
+        default: 2001
+      end:
+        description: end year
+        required: false
   schedule:
     - cron: "0 0 1-31/2 * *" # every odd day
-
-inputs:
-  start:
-    description: start year
-    required: false
-    default: 2001
-  end:
-    description: end year
-    required: false
 
 jobs:
   copy:
