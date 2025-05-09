@@ -12,7 +12,8 @@ for y in $(seq $start "$end"); do
         echo ">>> $y $m <<<"
         source="onedrive:media/albums/$y"
         remote="gphotos:upload"
-        rclone $flags copy "$source" $remote --metadata --no-traverse --no-update-modtime
+        rclone $flags copy "$source" $remote --metadata --no-update-modtime --order-by modtime
+        # --no-traverse
         echo
         # done
 done
