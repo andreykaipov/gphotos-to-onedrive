@@ -6,6 +6,15 @@ on:
   schedule:
     - cron: "0 0 1-31/2 * *" # every odd day
 
+inputs:
+  start:
+    description: start year
+    required: false
+    default: 2001
+  end:
+    description: end year
+    required: false
+
 jobs:
   copy:
     runs-on: ubuntu-latest
@@ -18,4 +27,6 @@ jobs:
           printf '%s' "${{ secrets.RCLONE_CONFIG }}" | base64 -d > /tmp/rclone.conf
           rclone --config /tmp/rclone.conf config file
           rclone --config /tmp/rclone.conf listremotes
+          export start=${{ inputs.start }}
+          export end=${{ inputs.end }}
           NO_DRY_RUN=1 ./scripts/onedrive-to-gphotos.sh
