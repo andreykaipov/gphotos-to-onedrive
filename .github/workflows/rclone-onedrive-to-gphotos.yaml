@@ -1,5 +1,5 @@
 ---
-name: onedrive to gphotos
+name: onedrive to gphotos ${{ inputs.start }} - ${{ inputs.end }}
 
 on:
   workflow_dispatch:
