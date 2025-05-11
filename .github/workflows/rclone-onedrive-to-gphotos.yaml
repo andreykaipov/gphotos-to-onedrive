@@ -1,5 +1,5 @@
 ---
-name: onedrive to gphotos ${{ inputs.start }} - ${{ inputs.end }}
+name: onedrive to gphotos
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
     container: ghcr.io/andreykaipov/rclone-gphotos-fork
     steps:
       - uses: actions/checkout@v4
-      - name: onedrive-to-gphotos
+      - name: onedrive-to-gphotos ${{ inputs.start }} - ${{ inputs.end }}
         run: |
           rclone version
           printf '%s' "${{ secrets.RCLONE_CONFIG }}" | base64 -d > /tmp/rclone.conf
