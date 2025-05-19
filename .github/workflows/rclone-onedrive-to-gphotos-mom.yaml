@@ -1,0 +1,29 @@
+---
+name: onedrive to gphotos mom
+
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: start year
+        required: false
+        default: 2001
+      end:
+        description: end year
+        required: false
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    container: ghcr.io/andreykaipov/rclone-gphotos-fork
+    steps:
+      - uses: actions/checkout@v4
+      - name: onedrive-to-gphotos ${{ inputs.start }} - ${{ inputs.end }}
+        run: |
+          rclone version
+          printf '%s' "${{ secrets.RCLONE_CONFIG_MOM }}" | base64 -d > /tmp/rclone.conf
+          rclone --config /tmp/rclone.conf config file
+          rclone --config /tmp/rclone.conf listremotes
+          export start=${{ inputs.start }}
+          export end=${{ inputs.end }}
+          NO_DRY_RUN=1 ./scripts/onedrive-to-gphotos.sh
